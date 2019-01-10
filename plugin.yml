@@ -1,0 +1,15 @@
+name: KitPvp
+version: 1.0.0
+main: me.bscal.stater.Main
+description: KitPVP plugin
+author: bscal
+commands:
+  events:
+    usage: /<command>
+    description: Starts an event
+  join:
+    usage: /<command>
+    description: Joins an event
+permissions:
+  kitpvp.admin:
+    default: op
