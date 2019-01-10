@@ -16,11 +16,9 @@ public class Main extends JavaPlugin {
 	public void onEnable() {
 		pluginInstance = this;
 		scheduler = getServer().getScheduler();
-		
 		EventStarter es = new EventStarter();
 		getCommand("events").setExecutor(es);
 		getCommand("join").setExecutor(es);
-		
 		PluginManager pm = Bukkit.getServer().getPluginManager();
 		pm.registerEvents(new KitPvpListener(), this);
 	}
