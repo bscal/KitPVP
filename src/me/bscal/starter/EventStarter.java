@@ -69,10 +69,10 @@ public class EventStarter implements CommandExecutor {
 			
 			currentPlayer.sendMessage("Event starting...");
 			// Do other player stuff
-			
-			// TODO DELETE THIS only for testing.
-			endEvent();
 		}
+		queue.clear();
+		// TODO DELETE THIS only for testing.
+		endEvent();
 	}
 	
 	public void endEvent() {
@@ -81,6 +81,7 @@ public class EventStarter implements CommandExecutor {
 			currentPlayer.closeInventory();
 			currentPlayer.getInventory().clear();
 			currentPlayer.getInventory().setContents(playerInventories.get(currentPlayer.getDisplayName()));
+			playerInventories.remove(currentPlayer.getName());
 			
 			currentPlayer.sendMessage("Event ending...");
 			// Do other player cleanup
